@@ -1,0 +1,81 @@
+doctype html
+html
+    head
+        title Register Student - Page
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        link(rel="stylesheet" , href="/css/custom.css")
+        script(src="/js/validateForm.js")
+    body
+        div.row.justify-content-center
+            div.col-md-6 
+                div.card-body 
+                    header.card-header 
+                        h4.card-title Student Details Entry Form
+                    br
+                    label Note all fields marked with a red star (<sup>*</sup>) are required
+                    form(method='POST' action='/register')
+                        div.form-row 
+                            div.col.form-group 
+                                label Sur name <sup>*</sup> 
+                                input.form-control(name='surname' id="surName" placeholder="Enter your Sur Name here")
+                                p(id="txt-surname")
+                            div.col.form-group 
+                                label Given name <sup>*</sup>
+                                input.form-control(name='givenname' id="givenName" placeholder="Enter your Given Name here")
+                                p(id="txt-givenname")
+                        div.form.row
+                            div.col.form-group
+                                label Gender <sup>*</sup> 
+                                br
+                                div.gender
+                                    label.form-check.form-check-inline
+                                        input.form-check-input(type='radio' name='gender' value='male' checked)
+                                        span.form-check-label Male   
+                                    label.form-check.form-check-inline
+                                        input.form-check-input(type='radio' name='gender' value='female')
+                                        span.form-check-label Female 
+                        div.form.row
+                            div.col.form-group 
+                                label Date of Birth <sup>*</sup>
+                                input.form-control(name='dob' type="date" id="Dob" placeholder="01/01/1970")
+                                p(id="txt-bdate")
+                            div.col.form-group 
+                                label Country <sup>*</sup>
+                                select.form-control(name='country') 
+                                    option(value="-------- Select Country --------" selected) -------- Select Country --------
+                                    option(value="Uganda") Uganda
+                                    option(value="Kenya") Kenya
+                                    option(value="Rwanda") Rwanda
+                                    option(value="Tanzania") Tanzania
+                                p(id="select-country")
+                        div.form.row
+                            div.col.form-group 
+                                label Place of Residence <sup>*</sup>
+                                input.form-control(name='residence' placeholder="Enter your Current place of resindence")
+                                p(id="txt-residence")
+                            div.col.form-group 
+                                label Phone Number <sup>*</sup>
+                                input.form-control(type="tel" name='phoneNumber' placeholder="E.g 07xxxxxxxx or +2567xxxxxxx")
+                                p(id="txt-number")
+                        div.form.row
+                            div.col.form-group
+                                label Email Address <sup>*</sup>
+                                input.form-control(type="email" name='emailAddress' placeholder="E.g applicant@gmail.com")
+                                p(id="txt-email")
+                        div.form.row
+                            div.col.form-group 
+                                label Skills (Seperate skills with commas) <sup>*</sup>
+                                textarea(class="form-control" name="skills", cols="50", rows="4")
+                            div.col.form-group 
+                                label Projects (Seperate skills with commas) <sup>*</sup>
+                                textarea(class="form-control" name="projects", cols="50", rows="4")
+                        div.form.row 
+                            div.col.form-group 
+                                
+                            div.col.form-group
+                                div.form.row 
+                                    div.col.form-group 
+                                        button.btn.btn-primary.btn-block.submit(onclick="formValidation()") Submit 
+                                    div.col.form-group 
+                                        button.btn.btn-primary.btn-block.cancel Cancel
+

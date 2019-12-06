@@ -1,0 +1,46 @@
+sup{
+    color: #c00000;
+    font-weight: bolder;
+}
+
+p{
+    color: #c00000;
+    font-weight: bolder;
+}
+
+.card-header{
+    background-color: #542a52;
+}
+
+.card-title{
+    color: #ffff;
+}
+
+label{
+    font-weight: bolder;
+    color: #542a52;
+
+}
+
+.gender{
+  /* display: inline-block; */
+   /* padding: 2em; */
+  width: 40%;
+  height: 50%;
+  /* margin-left: 400px; */
+  margin-top: 0;
+  border-style: 2px solid red;
+} 
+
+.cancel{
+    background-color: #ffff;
+    border-color: #542a52;
+    font-weight: bold;
+    color: #542a52;
+}
+
+.submit{
+    background-color: #542a52;
+    border-color: #542a52;
+    font-weight: bold;
+}

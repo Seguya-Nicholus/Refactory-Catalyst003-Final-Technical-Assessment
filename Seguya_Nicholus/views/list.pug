@@ -1,0 +1,52 @@
+doctype html
+html
+    head
+        title List Students - Page
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        link(rel="stylesheet" , href="/css/custom.css")
+    body
+        div.row.justify-content-center
+            div.col-md-9 
+                div.card-body 
+                    header.card-header 
+                        h4.card-title  Registered Students
+                        |&nbsp
+                        div.form-row
+                            div.col.form-group.col-md-9  
+                    br    
+                    table.table
+                        thead.thead-dark 
+                            tr
+                                th SurName
+                                th GivenName
+                                th Gender
+                                th DoB
+                                th Country
+                                th Residence
+                                th PhoneNumber
+                                th EmailAddress
+                                
+                        tbody
+                            each student in students
+                                tr 
+                                    td #{student.surname}
+                                    td #{student.givenname}
+                                    td #{student.gender}
+                                    td #{student.dob}
+                                    td #{student.country}
+                                    td #{student.residence}
+                                    td #{student.phoneNumber}
+                                    td #{student.emailAddress}
+                                    
+
+
+
+
+                                    // var givenName = document.registration.givenname;
+    // var uGender = document.registration.gender;
+    // var udob = document.registration.dob;
+    // var ucountry = document.registration.country;
+    // var uresindence = document.registration.residence;
+    // var unumber = document.registration.phoneNumber;
+    // var uemail = document.registration.emailAddress;
+    // // var ugender = document.getElementById('radiobtn');
